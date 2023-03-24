@@ -1,8 +1,11 @@
+---
 name: Keep fork up to date
 on:
   schedule:
     - cron: '0 0 * * *' # Run once a day at midnight
   workflow_dispatch: # Allow manual triggering
+    branches:
+      -master
 jobs:
   update:
     runs-on: ubuntu-latest
